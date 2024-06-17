@@ -1,0 +1,20 @@
+//Buzz numbers are those numbers that are divisible by seven or end with seven.
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder,divide;
+        divide=num%7;
+        reminder=num%10;
+        System.out.println(divide+" "+reminder);
+        if (reminder==7 || divide==0) {
+            System.out.println("This number is buzz number"); 
+        }
+        else{
+            System.out.println("This number is not buzz number");
+        }
+    }
+}
