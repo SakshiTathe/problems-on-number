@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int num1,count=0; 
+        num1=num;
+        while (num1!=0) {
+            count=count+1;
+            num1=num1/10;
+        }
+        System.out.println("number of digits:"+count);
+    }
+}
