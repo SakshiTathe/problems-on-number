@@ -1,0 +1,26 @@
+// A Duck number is a positive integer that contains at least one zero, except for those
+//with starting zeros.
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder,count=0; 
+        while (num!=0) {
+            reminder=num %10;
+            if(reminder==0){
+                count=1;
+                break;
+                }
+            num=num/10;
+        }
+        if (count==1) {
+            System.out.println("This number is Duck number"); 
+        }
+        else{
+            System.out.println("This number is not Duck number");
+        }
+    }
+}
