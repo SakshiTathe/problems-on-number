@@ -1,0 +1,25 @@
+//A neon number is number where sum of digits of square of the number is equal to the number.
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder,square,sum=0;
+        square=num*num;
+        System.out.println("square is:"+square );
+        while (square!=0) {
+            reminder=square %10;
+            sum=sum+reminder;
+            square=square/10;
+        }
+        System.out.println("sum is:"+sum);
+        if (num==sum) {
+            System.out.println("This number is neon number"); 
+        }
+        else{
+            System.out.println("This number is not neon number");
+        }
+    }
+}
