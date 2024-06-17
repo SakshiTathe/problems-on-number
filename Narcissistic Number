@@ -1,0 +1,30 @@
+//Narcissistic Number is a number that is the sum of its own digits each raised to 
+//the power of the number of digits
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder,num1,num2,count=0;
+        double sum=0; 
+        num1=num;
+        num2=num;
+        while (num1!=0) {
+            count=count+1;
+            num1=num1/10;
+        }
+        while (num!=0) {
+            reminder=num %10;
+            sum=sum+Math.pow(reminder,count);
+            num=num/10;
+        }
+        if (sum==num2) {
+            System.out.println("This number is Narcissistic number"); 
+        }
+        else{
+            System.out.println("This number is not Narcissistic number");
+        }
+    }
+}
