@@ -1,0 +1,33 @@
+//A number is said to be the Disarium number when the sum of its digit raised to the power of 
+// their respective positions is equal to the number itself.
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder,num1,num2,count=0; 
+        num1=num;
+        num2=num;
+        double sum=0;
+        while (num1!=0) {
+            count=count+1;
+            num1=num1/10;
+        }
+        System.out.println("number of digits:"+count);
+        while (num2!=0) {
+            reminder=num2 %10;
+            sum=sum+Math.pow(reminder,count);;
+            num2=num2/10;
+            count=count-1;
+            }
+        System.out.println("sum is:"+sum);
+        if (num==sum) {
+            System.out.println("This number is Disarium number"); 
+        }
+        else{
+            System.out.println("This number is not Disarium number");
+        }
+    }
+}
