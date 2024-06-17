@@ -1,0 +1,24 @@
+//Armstrong number is a number that is equal to the sum of cubes of its digits. 
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder,num1;
+        double sum=0;
+        num1=num;
+        while (num!=0) {
+            reminder=num %10;
+            sum=sum+Math.pow(reminder,3);
+            num=num/10;
+        }
+        if (sum==num1) {
+            System.out.println("This number is Armstrong number"); 
+        }
+        else{
+            System.out.println("This number is not Armstrong number");
+        }
+    }
+}
