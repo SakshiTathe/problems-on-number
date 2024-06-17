@@ -1,0 +1,27 @@
+//An automorphic number is an integer whose square ends with the given integer, 
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder1,reminder2,square,count=0;
+        square=num*num;
+        while (num!=0) {
+            reminder1=num %10;
+            reminder2=square %10;
+            if (reminder1!=reminder2) {
+                count=1;
+                System.out.println("This number is not automorphic number");
+                break;
+            }
+            num=num/10;
+            square=square/10; 
+        }
+        
+        if (count!=1) {
+            System.out.println("This number is automorphic number"); 
+        }
+    }
+}
