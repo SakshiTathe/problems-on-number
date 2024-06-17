@@ -1,0 +1,25 @@
+//A positive integer is called a spy number if the sum and product of its digits are equal.
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder;
+        int sum=0,product=1;
+        while (num!=0) {
+            reminder=num %10;
+            sum=sum+reminder;
+            product=product*reminder;
+            num=num/10;
+        }
+        System.out.println("sum:"+ sum+"  "+ "product:" +product);
+        if (sum==product) {
+            System.out.println("This number is spy number"); 
+        }
+        else{
+            System.out.println("This number is not spy number");
+        }
+    }
+}
