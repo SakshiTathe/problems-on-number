@@ -1,0 +1,26 @@
+// a number equal to the sum of its digits raised to each digit's power.
+import java.util.Scanner;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner = new Scanner(System.in);
+        int num = scanner.nextInt();
+        scanner.close();
+        int reminder,num1;
+        double sum=0; 
+        num1=num; 
+        while (num1!=0) {
+            reminder=num1 %10;
+            sum=sum+Math.pow(reminder,reminder);
+            num1=num1/10;
+        }
+        System.out.println(sum);
+        if (num==sum) {
+            System.out.println("This number is Münchhausen number"); 
+        }
+        else{
+            System.out.println("This number is not Münchhausen number");
+        }
+    }
+}
+ 
