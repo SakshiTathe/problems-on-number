@@ -1,0 +1,22 @@
+// a positive integer that is equal to the sum of its proper divisors. 
+import java.util.*;
+public class Numbers {
+    public static void main(String[] args) {
+        System.out.print("enter the number:");
+        Scanner scanner=new Scanner(System.in);
+        int num= scanner.nextInt();
+        scanner.close();
+        int sum=0;
+        for(int i=1;i<=(num/2);i++){
+            if (num%i==0) {
+                sum=sum+i;
+            }
+        }
+        if (sum==num) {
+            System.out.println("This number is Perfect number"); 
+        }
+        else{
+            System.out.println("This number is not Perfect number");
+        }
+    }
+}
