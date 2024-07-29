@@ -1,0 +1,13 @@
+public class basic { 
+    public static int sqrt(int x){
+        int result=Integer.MIN_VALUE,i=0;
+        while ((result<=x)) {
+            i++;
+            result=i*i;
+        }
+        return i-1;
+    }
+    public static void main(String[] args){
+        System.out.println("Square root of "+16+" is:"+sqrt(16));
+    }
+}
